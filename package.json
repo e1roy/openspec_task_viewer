@@ -1,0 +1,70 @@
+{
+  "name": "openspec-task-viewer",
+  "displayName": "OpenSpec Task Viewer",
+  "description": "View OpenSpec changes, documents and task progress in the sidebar",
+  "publisher": "e1roy",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e1roy/openspec_task_viewer.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/openspec/changes"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "openspec-explorer",
+          "title": "OpenSpec",
+          "icon": "media/openspec.svg"
+        }
+      ]
+    },
+    "views": {
+      "openspec-explorer": [
+        {
+          "id": "openspecTaskViewer",
+          "name": "Task Viewer"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "openspecTaskViewer.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "openspecTaskViewer.previewMarkdownAtLine",
+        "title": "Preview Markdown at Line"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "openspecTaskViewer.refresh",
+          "when": "view == openspecTaskViewer",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
