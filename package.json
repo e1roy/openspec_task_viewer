@@ -3,11 +3,12 @@
   "displayName": "OpenSpec Task Viewer",
   "description": "View OpenSpec changes, documents and task progress in the sidebar",
   "publisher": "e1roy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/e1roy/openspec_task_viewer.git"
   },
+  "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
