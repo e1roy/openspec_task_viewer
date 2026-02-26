@@ -4,6 +4,8 @@
 
 A Visual Studio Code extension that visualizes [OpenSpec](https://github.com/openspec) changes, documents, and task progress in the sidebar.
 
+> `install` : [vscode market](https://marketplace.visualstudio.com/items?itemName=e1roy.openspec-task-viewer)
+
 ## What is it?
 
 **OpenSpec Task Viewer** adds an **OpenSpec** panel to the VS Code Activity Bar. It scans the `openspec/changes/` directory in your workspace and presents all change proposals, their documents, and task checklists as an interactive tree view.
